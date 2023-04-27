@@ -6,14 +6,14 @@ import styled from "styled-components";
 import UploadPhoto from "../assets/Upload_photo.svg";
 
 const SignInForm = () => {
-  const { addPhoto } = useGlobalContext();
+  const { uploadPhoto, handleUserChange } = useGlobalContext();
   return (
     <SignInFormWrapper>
       <label>Get Started</label>
       <Button className="upload-btn" variant="contained" component="label">
-        <img src={UploadPhoto} alt="upload_photo" />
+        <img src={UploadPhoto} alt="upload_icon" />
         <input
-          onChange={addPhoto}
+          onChange={uploadPhoto}
           name="image"
           hidden
           accept="image/*"
@@ -22,6 +22,13 @@ const SignInForm = () => {
         />
       </Button>
       <Link to="/todocart">Sign in</Link>
+      <input
+        type="text"
+        placeholder="your name"
+        name="name"
+        value={name}
+        onChange={handleUserChange}
+      />
     </SignInFormWrapper>
   );
 };
