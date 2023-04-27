@@ -4,13 +4,13 @@ const initialState = {
   photo: "",
   name: "",
 };
-const getLocalStorage = () => {
+const getSessionStorage = () => {
   let storedValues = sessionStorage.getItem("userData");
   return storedValues ? JSON.parse(storedValues) : initialState;
 };
 const GlobalContext = React.createContext();
 const GlobalContextProvider = ({ children }) => {
-  const [user, setUser] = useState(getLocalStorage());
+  const [user, setUser] = useState(getSessionStorage());
 
   const uploadPhoto = (e) => {
     const file = e.target.files[0];
