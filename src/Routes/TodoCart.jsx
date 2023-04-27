@@ -1,20 +1,10 @@
 import React from "react";
-import { useGlobalContext } from "../Context/globalcontext";
-
+import Navbar from "../Components/Navbar";
 const TodoCart = () => {
-  const { user } = useGlobalContext();
-
   return (
-    <div>
-      {user.photo && (
-        <img
-          style={{ width: "100px", height: "100px" }}
-          src={user.photo}
-          alt="user_image"
-        />
-      )}
-      TodoCart
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 };
 
