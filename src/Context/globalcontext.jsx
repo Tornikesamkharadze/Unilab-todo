@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const initialState = {
   photo: "",
   name: "",
 };
-
+const getLocalStorage = () => {
+  let storedValues = sessionStorage.getItem("userData");
+  return storedValues ? JSON.parse(storedValues) : initialState;
+};
 const GlobalContext = React.createContext();
 const GlobalContextProvider = ({ children }) => {
-  const [user, setUser] = useState(initialState);
-  console.log(user);
+  const [user, setUser] = useState(getLocalStorage());
+
   const uploadPhoto = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -18,13 +21,20 @@ const GlobalContextProvider = ({ children }) => {
       setUser({ ...user, photo: base64String });
     };
   };
-  
+
   const handleUserChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
+
+  useEffect(() => {
+    sessionStorage.setItem("userData", JSON.stringify(user));
+  }, [user]);
+
   return (
-    <GlobalContext.Provider value={{ uploadPhoto, handleUserChange, user }}>
+    <GlobalContext.Provider
+      value={{ uploadPhoto, handleUserChange, user, setUser }}
+    >
       {children}
     </GlobalContext.Provider>
   );
