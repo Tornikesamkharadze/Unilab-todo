@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import { useGlobalContext } from "../Context/globalcontext";
 import { useNavigate } from "react-router-dom";
+
+import { useGlobalContext } from "../Context/globalcontext";
+import { useTodoContext } from "../Context/todoContext";
+
+import styled from "styled-components";
 
 const DisplayUser = () => {
   const { user, setUser } = useGlobalContext();
+  const { clearSessionStorage } = useTodoContext();
   const [logOut, setLogOut] = useState(false);
   const navigate = useNavigate();
 
@@ -12,6 +16,7 @@ const DisplayUser = () => {
 
   const logOutHandler = () => {
     setUser({ photo: "", name: "" });
+    clearSessionStorage();
     navigate("/");
   };
   return (
