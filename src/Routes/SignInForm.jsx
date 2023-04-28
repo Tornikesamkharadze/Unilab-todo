@@ -99,6 +99,7 @@ const SignInFormWrapper = styled.form`
       background-color: #5efc8d;
       border-radius: 4px;
       color: #000000;
+      cursor: pointer;
     }
     .sign-in:hover {
       background: #000000;
