@@ -26,7 +26,6 @@ const TodoContextProvider = ({ children }) => {
   const removeTodo = (id) => {
     dispatch({ type: "REMOVE_TODO", payload: id });
   };
-
   const clearSessionStorage = () => {
     dispatch({ type: "CLEAR_STORAGE" });
   };
