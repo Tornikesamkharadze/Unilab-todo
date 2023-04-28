@@ -1,16 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
+import { getSessionStorage } from "../utils/helper";
 
 const initialState = {
   photo: "",
   name: "",
 };
-const getSessionStorage = () => {
-  let storedValues = sessionStorage.getItem("userData");
-  return storedValues ? JSON.parse(storedValues) : initialState;
-};
+
 const GlobalContext = React.createContext();
 const GlobalContextProvider = ({ children }) => {
-  const [user, setUser] = useState(getSessionStorage());
+  const [user, setUser] = useState(getSessionStorage("userData", initialState));
 
   const uploadPhoto = (e) => {
     const file = e.target.files[0];
