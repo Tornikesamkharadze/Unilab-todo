@@ -104,6 +104,7 @@ const SignInFormWrapper = styled.form`
     .sign-in:hover {
       background: #000000;
       color: #ffffff;
+      transition: background-color 0.5s ease-out, color 0.9s ease-out;
     }
   }
   @media (min-width: 800px) {
