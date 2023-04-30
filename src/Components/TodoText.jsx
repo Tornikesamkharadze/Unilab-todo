@@ -39,7 +39,7 @@ const UlTodo = styled.ul`
   border-radius: 5px;
   max-width: 595px;
   height: 54px;
-  width: 100%;
+  width: 90%;
   opacity: ${(props) => (props.completeTodo ? "0.1" : "1")};
 `;
 
