@@ -7,7 +7,7 @@ import styled from "styled-components";
 const TodoText = () => {
   const { state, removeTodo, togleTodo } = useTodoContext();
   const handleTodoComplete = (id) => togleTodo(id);
-
+  
   return (
     <>
       {state.map((todo) => {
