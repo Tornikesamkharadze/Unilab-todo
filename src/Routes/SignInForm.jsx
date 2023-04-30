@@ -71,7 +71,8 @@ const SignInFormWrapper = styled.form`
       width: 70%;
       height: 70vh;
       h1 {
-        margin: 30px 0 44px 0;
+        /*   margin: 30px 0 44px 0; */
+        margin: 0px 0 22px 0;
         color: #000000;
         font-size: 28px;
       }
@@ -81,7 +82,8 @@ const SignInFormWrapper = styled.form`
       width: 122px;
       border-radius: 50%;
       background: #e6ebff;
-      margin: 10px 0 53px 0;
+      /*  margin: 10px 0 53px 0; */
+      margin: 10px 0 30px 0;
     }
     .upload-btn:hover {
       background-color: #5efc8d;
@@ -112,6 +114,7 @@ const SignInFormWrapper = styled.form`
       width: 588px;
       height: 688px;
       h1 {
+        margin: 30px 0 44px 0;
         font-size: 48px;
       }
     }
@@ -121,6 +124,9 @@ const SignInFormWrapper = styled.form`
     }
     .sign-in {
       font-size: 45px;
+    }
+    .upload-btn {
+      margin: 10px 0 53px 0;
     }
   }
 `;
