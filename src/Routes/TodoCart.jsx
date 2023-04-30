@@ -11,7 +11,7 @@ const TodoCart = () => {
     <>
       <Navbar />
       <TodoWrapper onClick={handleSubmit}>
-        <h1>add your Daily tasks</h1>
+        <label>add your Daily tasks</label>
         <div className="add-todo">
           <input
             type="text"
@@ -33,7 +33,7 @@ const TodoWrapper = styled.form`
   flex-direction: column;
   align-items: center;
   h1 {
-    margin-bottom: 20px;
+    margin: 35px 0 27px 0;
   }
   .add-todo {
     display: flex;
@@ -49,7 +49,7 @@ const TodoWrapper = styled.form`
     background: #e6ebff;
     width: 100%;
     height: 76px;
-    max-width: 532px;
+    max-width: 500px;
     box-sizing: border-box;
   }
   input:focus {
@@ -59,8 +59,9 @@ const TodoWrapper = styled.form`
     background-color: #5efc8d;
     color: black;
     border: none;
+    font-size: 32px;
     height: 76px;
-    width: 3.9rem;
+    width: 5.9rem;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     cursor: pointer;
