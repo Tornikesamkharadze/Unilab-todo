@@ -19,6 +19,7 @@ const DisplayUser = () => {
     clearSessionStorage();
     navigate("/");
   };
+  
   return (
     <UserWrapper>
       <p>{user.name}</p>
