@@ -29,7 +29,7 @@ const DisplayUser = () => {
             <div className="popup">
               <div className="popup-content">
                 <p className="popup-text">
-                  <span>note:</span> if you logout endered information will be
+                  <span>note:</span> if you logout entered information will be
                   deleted
                 </p>
                 <GrClose className="popup-close" onClick={toggleHandler} />
