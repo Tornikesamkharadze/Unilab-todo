@@ -27,6 +27,11 @@ const NavContainer = styled.nav`
       background: #000000;
     }
   }
+  @media (min-width: 500px) {
+   h1{
+    font-size:36px
+   }
+  }
   
 `;
 export default Navbar;
