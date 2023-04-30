@@ -39,6 +39,7 @@ const FormWrapper = styled.form`
     }
     .start-btn:hover {
       background-color: #ffffff;
+      transition: background-color 0.5s ease-out;
     }
   }
   @media (min-width: 800px) {
