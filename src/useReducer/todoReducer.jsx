@@ -6,6 +6,12 @@ export const todoReducer = (state, action) => {
       return state.filter((todo) => {
         return todo.id !== action.payload;
       });
+    case "TOGGLE_COMPLETE":
+      return state.map((todo) =>
+        todo.id === action.payload
+          ? { ...todo, complete: !todo.complete }
+          : todo
+      );
     case "CLEAR_STORAGE":
       return [];
     default:
