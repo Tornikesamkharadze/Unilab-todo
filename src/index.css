@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./assets/Poppins-Regular.ttf");
+}
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "Poppins-Regular";
 }
 body {
   text-transform: capitalize;

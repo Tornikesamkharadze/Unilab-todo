@@ -25,13 +25,15 @@ const NavContainer = styled.nav`
       height: 98px;
       padding: 0px 28px;
       background: #000000;
+      h1 {
+        cursor: pointer;
+      }
     }
   }
   @media (min-width: 500px) {
-   h1{
-    font-size:36px
-   }
+    h1 {
+      font-size: 36px;
+    }
   }
-  
 `;
 export default Navbar;
