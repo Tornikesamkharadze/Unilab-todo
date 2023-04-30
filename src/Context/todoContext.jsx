@@ -29,7 +29,9 @@ const TodoContextProvider = ({ children }) => {
   const clearSessionStorage = () => {
     dispatch({ type: "CLEAR_STORAGE" });
   };
-
+  const togleTodo = (id) => {
+    dispatch({ type: "TOGGLE_COMPLETE", payload: id });
+  };
   return (
     <TodoContext.Provider
       value={{
@@ -37,6 +39,7 @@ const TodoContextProvider = ({ children }) => {
         setNewTodo,
         removeTodo,
         clearSessionStorage,
+        togleTodo,
         newTodo,
         state,
       }}
