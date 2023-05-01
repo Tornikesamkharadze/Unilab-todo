@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../Context/globalcontext";
 import { useTodoContext } from "../Context/todoContext";
 import Popup from "./Popup";
-import { GrClose } from "react-icons/gr";
 import styled from "styled-components";
 
 const DisplayUser = () => {
@@ -15,7 +14,7 @@ const DisplayUser = () => {
   const toggleHandler = () => setLogOut(!logOut);
 
   const logOutHandler = () => {
-    setUser({ photo: "", name: "" });
+    setUser({ photo: "", name: "", isClicked: false });
     clearSessionStorage();
     navigate("/");
   };
