@@ -7,7 +7,7 @@ const Popup = ({ toggleHandler, logOutHandler }) => {
     <PopupWrapper className="popup">
       <div className="popup-content">
         <p className="popup-text">
-          <span>note:</span> if you logout entered information will be deleted
+          <span>note:</span> if you log out, the information you entered will be deleted
         </p>
         <GrClose className="popup-close" onClick={toggleHandler} />
         <button className="popup-logout" onClick={logOutHandler}>
