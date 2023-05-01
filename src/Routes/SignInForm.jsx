@@ -70,6 +70,7 @@ const SignInFormWrapper = styled.form`
       border-radius: 4px;
       width: 70%;
       height: 70vh;
+      min-height: 515px;
       h1 {
         /*   margin: 30px 0 44px 0; */
         margin: 0px 0 22px 0;
