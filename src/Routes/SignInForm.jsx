@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useGlobalContext } from "../Context/globalcontext";
 import { Button } from "@mui/material";
 import styled from "styled-components";
 import UploadPhoto from "../assets/Upload_photo.svg";
 
 const SignInForm = () => {
-  const { uploadPhoto, user, handleUserChange } = useGlobalContext();
+  const { uploadPhoto, user, handleUserChange, isLogedIn } = useGlobalContext();
   const isSignIn = user.photo !== "" && user.name !== "";
 
-  const handleKeyDown = (event) => {
-    if (event.keyCode === 13) event.preventDefault();
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) e.preventDefault();
   };
 
   return (
@@ -44,9 +43,9 @@ const SignInForm = () => {
           className="user-input"
         />
         {isSignIn ? (
-          <Link className="sign-in" to="/todocart">
+          <button onClick={isLogedIn} className="sign-in">
             Sign in
-          </Link>
+          </button>
         ) : (
           <span className="sign-in">Sign in</span>
         )}
