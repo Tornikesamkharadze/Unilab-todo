@@ -4,6 +4,7 @@ import { getSessionStorage } from "../utils/helper";
 const initialState = {
   photo: "",
   name: "",
+  isClicked: false,
 };
 
 const GlobalContext = React.createContext();
@@ -20,6 +21,10 @@ const GlobalContextProvider = ({ children }) => {
     };
   };
 
+  const isLogedIn = () => {
+    setUser({ ...user, isClicked: true });
+  };
+
   const handleUserChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
@@ -31,7 +36,13 @@ const GlobalContextProvider = ({ children }) => {
 
   return (
     <GlobalContext.Provider
-      value={{ uploadPhoto, handleUserChange, user, setUser }}
+      value={{
+        uploadPhoto,
+        handleUserChange,
+        user,
+        setUser,
+        isLogedIn,
+      }}
     >
       {children}
     </GlobalContext.Provider>
