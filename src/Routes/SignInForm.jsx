@@ -9,6 +9,10 @@ const SignInForm = () => {
   const { uploadPhoto, user, handleUserChange } = useGlobalContext();
   const isSignIn = user.photo !== "" && user.name !== "";
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) event.preventDefault();
+  };
+
   return (
     <SignInFormWrapper>
       <div className="form-container">
@@ -36,6 +40,7 @@ const SignInForm = () => {
           name="name"
           value={user.name}
           onChange={handleUserChange}
+          onKeyDown={handleKeyDown}
           className="user-input"
         />
         {isSignIn ? (
