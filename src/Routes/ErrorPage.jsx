@@ -15,7 +15,7 @@ const ErrorPage = () => {
         ></img>
         <h3>sorry, the page you tried cannot be found</h3>
         <Link className="btn" to={"/"}>
-          back home
+          return to the site
         </Link>
       </div>
     </Wrapper>
